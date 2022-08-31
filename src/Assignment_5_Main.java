@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-public class Assignment_5 {
+public class Assignment_5_Main {
     private static Scanner input=new Scanner(System.in);
     private int accNo;
     private double accBal;
     private String accPass;
     private String BankName;
 
-    public Assignment_5() {
+    public Assignment_5_Main() {
     }
 
-    public Assignment_5(int accNo, double accBal, String accPass, String bankName) {
+    public Assignment_5_Main(int accNo, double accBal, String accPass, String bankName) {
         this.accNo = accNo;
         this.accBal = accBal;
         this.accPass = accPass;
@@ -21,9 +21,7 @@ public class Assignment_5 {
         return input;
     }
 
-    public static void setInput(Scanner input) {
-        Assignment_5.input = input;
-    }
+
 
     public int getAccNo() {
         return accNo;
@@ -56,14 +54,17 @@ public class Assignment_5 {
     public void setBankName(String bankName) {
         BankName = bankName;
     }
-private void displayAccount(){
+public void displayAccount(){
     System.out.println(getBankName()+""+getAccPass()+""+getAccBal()+""+getAccNo());
 
 }
 public static void main(String[] args) {
-Assignment_5 a=new Assignment_5();
-
+Assignment_5_Main a=new Assignment_5_Main();
 a.displayAccount();
+Assignment5_savings b=new Assignment5_savings();
+b.displayAccount();
+Assignment_5_currAcc c=new Assignment_5_currAcc();
+c.displayAccount();
 
     }
 
